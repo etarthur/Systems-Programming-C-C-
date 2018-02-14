@@ -1,0 +1,144 @@
+\section{Event\+Queue Class Reference}
+\label{classEventQueue}\index{Event\+Queue@{Event\+Queue}}
+
+
+\doxyref{Event\+Queue}{p.}{classEventQueue} is a priorty\+\_\+queue of events, is the global overhead for the entire project.  
+
+
+
+
+{\ttfamily \#include $<$eventqueue.\+h$>$}
+
+Inheritance diagram for Event\+Queue\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEventQueue}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Event\+Queue} ()
+\item 
+void \textbf{ get\+Next} ()
+\item 
+void \textbf{ get\+Next\+Multiple\+Lines} ()
+\item 
+\textbf{ Event} $\ast$ \textbf{ front} ()
+\item 
+void \textbf{ remove} ()
+\item 
+void \textbf{ add} (\textbf{ Event} $\ast$a)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::priority\+\_\+queue$<$ \textbf{ Event} $\ast$, std\+::vector$<$ \textbf{ Event} $\ast$ $>$, \textbf{ Compare\+Events} $>$ \textbf{ eq}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Event\+Queue}{p.}{classEventQueue} is a priorty\+\_\+queue of events, is the global overhead for the entire project. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classEventQueue_ab7de5a41befc94aac0f461391e67f14a}} 
+\index{Event\+Queue@{Event\+Queue}!Event\+Queue@{Event\+Queue}}
+\index{Event\+Queue@{Event\+Queue}!Event\+Queue@{Event\+Queue}}
+\subsubsection{Event\+Queue()}
+{\footnotesize\ttfamily Event\+Queue\+::\+Event\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classEventQueue_a9a0105eb1a4798cd5b5064c94f7d0954}} 
+\index{Event\+Queue@{Event\+Queue}!add@{add}}
+\index{add@{add}!Event\+Queue@{Event\+Queue}}
+\subsubsection{add()}
+{\footnotesize\ttfamily void Event\+Queue\+::add (\begin{DoxyParamCaption}\item[{\textbf{ Event} $\ast$}]{event }\end{DoxyParamCaption})}
+
+\doxyref{add()}{p.}{classEventQueue_a9a0105eb1a4798cd5b5064c94f7d0954} takes a pointer to an event and adds it to the queue 
+
+References eq.
+
+
+
+Referenced by Customer\+::action\+\_\+multiple\+\_\+lines(), Teller\+::action\+\_\+multiple\+\_\+lines(), Customer\+::action\+\_\+single\+\_\+line(), Teller\+::process\+\_\+transaction(), sim\+\_\+multiple\+\_\+lines(), and sim\+\_\+single\+\_\+line().
+
+\mbox{\label{classEventQueue_ae8ca507accdf109bc487034b299d0f62}} 
+\index{Event\+Queue@{Event\+Queue}!front@{front}}
+\index{front@{front}!Event\+Queue@{Event\+Queue}}
+\subsubsection{front()}
+{\footnotesize\ttfamily \textbf{ Event} $\ast$ Event\+Queue\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{front()}{p.}{classEventQueue_ae8ca507accdf109bc487034b299d0f62} returns a pointer to the first element in the queue \begin{DoxyReturn}{Returns}
+a pointer to the first \doxyref{Event}{p.}{classEvent} in the queue 
+\end{DoxyReturn}
+
+
+References eq.
+
+
+
+Referenced by Customer\+::action\+\_\+single\+\_\+line(), and Teller\+::process\+\_\+transaction().
+
+\mbox{\label{classEventQueue_a4caa21498f84ed469d39cb0b9e0e6dd0}} 
+\index{Event\+Queue@{Event\+Queue}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Event\+Queue@{Event\+Queue}}
+\subsubsection{get\+Next()}
+{\footnotesize\ttfamily void Event\+Queue\+::get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{get\+Next()}{p.}{classEventQueue_a4caa21498f84ed469d39cb0b9e0e6dd0} removes the first event in the queue and runs the action for it \doxyref{get\+Next()}{p.}{classEventQueue_a4caa21498f84ed469d39cb0b9e0e6dd0} takes off the first event and runs the corresponding event, either customer or teller, this function is used for a one line simulation 
+
+References Event\+::action\+\_\+single\+\_\+line(), and eq.
+
+
+
+Referenced by sim\+\_\+single\+\_\+line().
+
+\mbox{\label{classEventQueue_a3af432f6e5af6071c3eeb13d16c1288d}} 
+\index{Event\+Queue@{Event\+Queue}!get\+Next\+Multiple\+Lines@{get\+Next\+Multiple\+Lines}}
+\index{get\+Next\+Multiple\+Lines@{get\+Next\+Multiple\+Lines}!Event\+Queue@{Event\+Queue}}
+\subsubsection{get\+Next\+Multiple\+Lines()}
+{\footnotesize\ttfamily void Event\+Queue\+::get\+Next\+Multiple\+Lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{get\+Next\+Multiple\+Lines()}{p.}{classEventQueue_a3af432f6e5af6071c3eeb13d16c1288d} takes the first event off the queue and runs the action for it, for multiple lines does the same as \doxyref{get\+Next()}{p.}{classEventQueue_a4caa21498f84ed469d39cb0b9e0e6dd0} function, but used for multiple line simulation instead 
+
+References Event\+::action\+\_\+multiple\+\_\+lines(), and eq.
+
+
+
+Referenced by sim\+\_\+multiple\+\_\+lines().
+
+\mbox{\label{classEventQueue_a81f74630368648a1dd6d8ee2656fda75}} 
+\index{Event\+Queue@{Event\+Queue}!remove@{remove}}
+\index{remove@{remove}!Event\+Queue@{Event\+Queue}}
+\subsubsection{remove()}
+{\footnotesize\ttfamily void Event\+Queue\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{remove()}{p.}{classEventQueue_a81f74630368648a1dd6d8ee2656fda75} removes the first element from the queue 
+
+References eq.
+
+
+
+Referenced by Customer\+::action\+\_\+single\+\_\+line(), and Teller\+::process\+\_\+transaction().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classEventQueue_a4e9008a24e40e43b72ad1d72d57b8d67}} 
+\index{Event\+Queue@{Event\+Queue}!eq@{eq}}
+\index{eq@{eq}!Event\+Queue@{Event\+Queue}}
+\subsubsection{eq}
+{\footnotesize\ttfamily std\+::priority\+\_\+queue$<$\textbf{ Event} $\ast$, std\+::vector$<$\textbf{ Event} $\ast$$>$, \textbf{ Compare\+Events}$>$ Event\+Queue\+::eq}
+
+
+
+Referenced by Teller\+::action\+\_\+single\+\_\+line(), add(), front(), get\+Next(), get\+Next\+Multiple\+Lines(), remove(), sim\+\_\+multiple\+\_\+lines(), and sim\+\_\+single\+\_\+line().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ eventqueue.\+h}\item 
+\textbf{ eventqueue.\+cpp}\end{DoxyCompactItemize}

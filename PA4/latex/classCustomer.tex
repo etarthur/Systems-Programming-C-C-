@@ -1,0 +1,161 @@
+\section{Customer Class Reference}
+\label{classCustomer}\index{Customer@{Customer}}
+
+
+\doxyref{Customer}{p.}{classCustomer} is a derived \doxyref{Event}{p.}{classEvent} class that contains information on how long a customer was in the bank for.  
+
+
+
+
+{\ttfamily \#include $<$customer.\+h$>$}
+
+Inheritance diagram for Customer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classCustomer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Customer} ()
+\item 
+\textbf{ Customer} (int \textbf{ t})
+\item 
+\textbf{ Event} $\ast$ \textbf{ add} ()
+\item 
+int \textbf{ get\+Time} ()
+\item 
+void \textbf{ action\+\_\+single\+\_\+line} ()
+\item 
+void \textbf{ action\+\_\+multiple\+\_\+lines} ()
+\item 
+virtual \textbf{ $\sim$\+Customer} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Customer}{p.}{classCustomer} is a derived \doxyref{Event}{p.}{classEvent} class that contains information on how long a customer was in the bank for. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classCustomer_abcc8fae9701e5ba9d7d6fe44498b34e3}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\subsubsection{Customer()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\label{classCustomer_ad0509039bdcad60a3ec631b08d904ad3}} 
+\index{Customer@{Customer}!Customer@{Customer}}
+\index{Customer@{Customer}!Customer@{Customer}}
+\subsubsection{Customer()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Customer\+::\+Customer (\begin{DoxyParamCaption}\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+References action\+\_\+multiple\+\_\+lines(), action\+\_\+single\+\_\+line(), add(), get\+Time(), and t.
+
+\mbox{\label{classCustomer_a7784915654b180d09696edded3db913d}} 
+\index{Customer@{Customer}!````~Customer@{$\sim$\+Customer}}
+\index{````~Customer@{$\sim$\+Customer}!Customer@{Customer}}
+\subsubsection{$\sim$\+Customer()}
+{\footnotesize\ttfamily virtual Customer\+::$\sim$\+Customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classCustomer_a308e99ea9a319588c258096cc7d67619}} 
+\index{Customer@{Customer}!action\+\_\+multiple\+\_\+lines@{action\+\_\+multiple\+\_\+lines}}
+\index{action\+\_\+multiple\+\_\+lines@{action\+\_\+multiple\+\_\+lines}!Customer@{Customer}}
+\subsubsection{action\+\_\+multiple\+\_\+lines()}
+{\footnotesize\ttfamily void Customer\+::action\+\_\+multiple\+\_\+lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{action\+\_\+multiple\+\_\+lines()}{p.}{classCustomer_a308e99ea9a319588c258096cc7d67619} runs the action for a customer when there are multiple teller queues. this function effectively figures out which line is shortest and adds a customer to that corresponding line if multiple lines have the same length the customer is added to a random line. 
+
+Reimplemented from \textbf{ Event} \doxyref{}{p.}{classEvent_af197959167ba84c6be2f620b32e3b5e5}.
+
+
+
+References Event\+Queue\+::add(), customers\+\_\+in\+\_\+line, and tellers.
+
+
+
+Referenced by Customer().
+
+\mbox{\label{classCustomer_a36c3b10fb6173b58a47ecbbd940a059d}} 
+\index{Customer@{Customer}!action\+\_\+single\+\_\+line@{action\+\_\+single\+\_\+line}}
+\index{action\+\_\+single\+\_\+line@{action\+\_\+single\+\_\+line}!Customer@{Customer}}
+\subsubsection{action\+\_\+single\+\_\+line()}
+{\footnotesize\ttfamily void Customer\+::action\+\_\+single\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{action\+\_\+single\+\_\+line()}{p.}{classCustomer_a36c3b10fb6173b58a47ecbbd940a059d} performs the action for a customer in a single line simulation according to the guidelines \doxyref{action\+\_\+single\+\_\+line()}{p.}{classCustomer_a36c3b10fb6173b58a47ecbbd940a059d} does as specified in the handout instructions, the first customer in line is taken out and his time is incremented with the idle time of waiting in line. Then the global variables for data being tracked are updated accordingly, such as total\+\_\+idle\+\_\+time and times\+\_\+idle. The customer is then readded to the queue with the updated time. Then a random transaction time is generated for the customer and it is added to his time, and again other global variables are updated, total\+\_\+time and total\+\_\+transaction\+\_\+time get updated. 
+
+Reimplemented from \textbf{ Event} \doxyref{}{p.}{classEvent_a06dcd0b52b9b7dbbf4b43e60702098d7}.
+
+
+
+References Event\+Queue\+::add(), Event\+::add\+\_\+time(), avg\+\_\+service\+\_\+time, Event\+Queue\+::front(), Event\+::get\+Idle(), Event\+::get\+Time(), max\+\_\+time\+\_\+until\+\_\+service, Event\+Queue\+::remove(), time\+\_\+in\+\_\+bank, times\+\_\+idle, total\+\_\+idle\+\_\+time, total\+\_\+time, and total\+\_\+transaction\+\_\+time.
+
+
+
+Referenced by Customer().
+
+\mbox{\label{classCustomer_a3b442d7e7f188dbf297d750c991f59ee}} 
+\index{Customer@{Customer}!add@{add}}
+\index{add@{add}!Customer@{Customer}}
+\subsubsection{add()}
+{\footnotesize\ttfamily \textbf{ Event} $\ast$ Customer\+::add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{add()}{p.}{classCustomer_a3b442d7e7f188dbf297d750c991f59ee} creates a new \doxyref{Customer}{p.}{classCustomer} event with a random arrival time and returns a pointer to it \doxyref{add()}{p.}{classCustomer_a3b442d7e7f188dbf297d750c991f59ee} generates a random arrival time using the max simulation time from the command line input to create a random time. \begin{DoxyReturn}{Returns}
+A pointer to the new customer event created 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ Event} \doxyref{}{p.}{classEvent_a0e9f39799c37a7c676f376cf786e9e58}.
+
+
+
+References simulation\+\_\+time.
+
+
+
+Referenced by Customer().
+
+\mbox{\label{classCustomer_a34f99014d4f23a474dea0dd337345370}} 
+\index{Customer@{Customer}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Customer@{Customer}}
+\subsubsection{get\+Time()}
+{\footnotesize\ttfamily int Customer\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{get\+Time()}{p.}{classCustomer_a34f99014d4f23a474dea0dd337345370} returns the arrival time of a customer object
+
+\begin{DoxyReturn}{Returns}
+The arrival time of a customer 
+\end{DoxyReturn}
+
+
+Reimplemented from \textbf{ Event} \doxyref{}{p.}{classEvent_a32abdebfd9f3e62bbc7ef36ba7b6964a}.
+
+
+
+Referenced by Customer().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classCustomer_ad94d570ce65268bba8466928e946fbcf}} 
+\index{Customer@{Customer}!time@{time}}
+\index{time@{time}!Customer@{Customer}}
+\subsubsection{time}
+{\footnotesize\ttfamily int Customer\+::time}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ customer.\+h}\item 
+\textbf{ customer.\+cpp}\end{DoxyCompactItemize}

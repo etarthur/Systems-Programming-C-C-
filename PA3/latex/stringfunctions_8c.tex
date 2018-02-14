@@ -1,0 +1,76 @@
+\section{stringfunctions.\+c File Reference}
+\label{stringfunctions_8c}\index{stringfunctions.\+c@{stringfunctions.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stringfunctions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ compare\+String} (int i, char $\ast$a, char $\ast$b, int alen, int blen)
+\item 
+void \textbf{ print\+String} (char $\ast$a)
+\item 
+void \textbf{ string\+Cleaner} (char $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{stringfunctions_8c_ad7bf079bacd4ef94c68cfaf02477fad4}} 
+\index{stringfunctions.\+c@{stringfunctions.\+c}!compare\+String@{compare\+String}}
+\index{compare\+String@{compare\+String}!stringfunctions.\+c@{stringfunctions.\+c}}
+\subsubsection{compare\+String()}
+{\footnotesize\ttfamily int compare\+String (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{char $\ast$}]{a,  }\item[{char $\ast$}]{b,  }\item[{int}]{alen,  }\item[{int}]{blen }\end{DoxyParamCaption})}
+
+stringfunctions contains functions that work with strings. compare\+String compares two string and returns the one which is alphabetically later. comapre\+String works by comparing individual characters of the input strings, and using their integer values to determine alphabetical order. This function works recursively, and if one string is longer than the other, and they contain all the same characters it will return the on which is longer. This functions is used to determine where strings belong in the binary tree. 
+\begin{DoxyParams}{Parameters}
+{\em i} & the index being compared, input 0 for this in almost all cases \\
+\hline
+{\em a} & pointer to a string being compared \\
+\hline
+{\em b} & pointer to the second string being compared \\
+\hline
+{\em alen} & the length of string a \\
+\hline
+{\em blen} & the length of string b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+:returns 1 if the strings are the same, 0 if the first input is smaller, and 2 otherwise 
+\end{DoxyReturn}
+
+
+References compare\+String().
+
+
+
+Referenced by add\+Node(), and compare\+String().
+
+\mbox{\label{stringfunctions_8c_a9082c5136c56d8e1112fb26bfda8d5f5}} 
+\index{stringfunctions.\+c@{stringfunctions.\+c}!print\+String@{print\+String}}
+\index{print\+String@{print\+String}!stringfunctions.\+c@{stringfunctions.\+c}}
+\subsubsection{print\+String()}
+{\footnotesize\ttfamily void print\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{a }\end{DoxyParamCaption})}
+
+print\+String consumes a string and prints it out print\+String consumes a pointer to a string and prints it out, not a complex function, but one used a lot, made to clean up repetition 
+\begin{DoxyParams}{Parameters}
+{\em a} & a pointer to a string being printed \\
+\hline
+\end{DoxyParams}
+\mbox{\label{stringfunctions_8c_a65c549ceb82657268aecb1e2f3bbed3c}} 
+\index{stringfunctions.\+c@{stringfunctions.\+c}!string\+Cleaner@{string\+Cleaner}}
+\index{string\+Cleaner@{string\+Cleaner}!stringfunctions.\+c@{stringfunctions.\+c}}
+\subsubsection{string\+Cleaner()}
+{\footnotesize\ttfamily void string\+Cleaner (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+string\+Cleaner consumes a string and cleans it of any punctuation or non alphabetical chars string\+Cleaner loops through and checks all the characters to make sure they are either char or \textquotesingle{} or -\/ and if not removes them it also places a terminating character at the end of the string. 
+\begin{DoxyParams}{Parameters}
+{\em s} & the string to be cleaned \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by main().
+

@@ -1,0 +1,222 @@
+\section{Doodlebug Class Reference}
+\label{classDoodlebug}\index{Doodlebug@{Doodlebug}}
+
+
+{\ttfamily \#include $<$Doodlebug.\+h$>$}
+
+Inheritance diagram for Doodlebug\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDoodlebug}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Doodlebug} ()
+\item 
+virtual \textbf{ $\sim$\+Doodlebug} ()
+\item 
+\textbf{ Doodlebug} (int \textbf{ x}, int \textbf{ y})
+\item 
+int \textbf{ get\+Time} ()
+\item 
+void \textbf{ move} ()
+\item 
+\textbf{ Doodlebug} $\ast$ \textbf{ breed} ()
+\item 
+bool \textbf{ is\+Move} (int \textbf{ x}, int \textbf{ y})
+\item 
+bool \textbf{ starve} ()
+\item 
+void \textbf{ action} ()
+\item 
+void \textbf{ simple\+Move} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ hunger}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classDoodlebug_afb2796ea39a6ffa13d4f54ac68dd52fc}} 
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\subsubsection{Doodlebug()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Doodlebug\+::\+Doodlebug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{Doodlebug()}{p.}{classDoodlebug_afb2796ea39a6ffa13d4f54ac68dd52fc} is the constructor for a \doxyref{Doodlebug}{p.}{classDoodlebug} object with no parameters 
+
+Referenced by breed().
+
+\mbox{\label{classDoodlebug_ac318cc9acbd9a3af52348a236070d891}} 
+\index{Doodlebug@{Doodlebug}!````~Doodlebug@{$\sim$\+Doodlebug}}
+\index{````~Doodlebug@{$\sim$\+Doodlebug}!Doodlebug@{Doodlebug}}
+\subsubsection{$\sim$\+Doodlebug()}
+{\footnotesize\ttfamily Doodlebug\+::$\sim$\+Doodlebug (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{$\sim$\+Doodlebug()}{p.}{classDoodlebug_ac318cc9acbd9a3af52348a236070d891} is the destructor for a \doxyref{Doodlebug}{p.}{classDoodlebug} object, it decrements the number of current doodlebugs 
+
+References numD.
+
+\mbox{\label{classDoodlebug_a19533236bfac6389c54a6559d5480fa4}} 
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\index{Doodlebug@{Doodlebug}!Doodlebug@{Doodlebug}}
+\subsubsection{Doodlebug()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Doodlebug\+::\+Doodlebug (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\doxyref{Doodlebug()}{p.}{classDoodlebug_afb2796ea39a6ffa13d4f54ac68dd52fc} is the constructor for a \doxyref{Doodlebug}{p.}{classDoodlebug} object with coordinates as parameters, and is initialized with default values. It increments the count of total and current doodlebugs 
+
+References Organism\+::age, hunger, Organism\+::is\+Prey, numD, totalD, Organism\+::x, and Organism\+::y.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classDoodlebug_a245518049f4a933c08fbd9e0c4d28be9}} 
+\index{Doodlebug@{Doodlebug}!action@{action}}
+\index{action@{action}!Doodlebug@{Doodlebug}}
+\subsubsection{action()}
+{\footnotesize\ttfamily void Doodlebug\+::action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{action()}{p.}{classDoodlebug_a245518049f4a933c08fbd9e0c4d28be9} processes a regular turn of an ant, moving the ant and checking if it can breed in the current turn 
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_af4dd34a96becf4f02ce4597901b81f60}.
+
+
+
+References Organism\+::age, breed(), Organism\+::can\+Move, hunger, move(), starve(), totalD, Organism\+::x, and Organism\+::y.
+
+\mbox{\label{classDoodlebug_a8b55bcada319ee2e9fc225073d9e72a2}} 
+\index{Doodlebug@{Doodlebug}!breed@{breed}}
+\index{breed@{breed}!Doodlebug@{Doodlebug}}
+\subsubsection{breed()}
+{\footnotesize\ttfamily \textbf{ Doodlebug} $\ast$ Doodlebug\+::breed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{breed()}{p.}{classDoodlebug_a8b55bcada319ee2e9fc225073d9e72a2} checks the age of the doodlebug and creates a new doodlebug if the age of the doodlebug is at least 8. Upon creating a new doodlebug, moves it into an adjacent cell and resets the age of the current doodlebug
+
+\begin{DoxyReturn}{Returns}
+pointer to the newly born doodlebug or a null object if breeding conditions are not met 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_ad963420d8437f87bd8fe4277cc7f810a}.
+
+
+
+References Organism\+::age, Doodlebug(), move(), totalD, Organism\+::x, and Organism\+::y.
+
+
+
+Referenced by action().
+
+\mbox{\label{classDoodlebug_a4325b77e742e8d1f93004f442f09461a}} 
+\index{Doodlebug@{Doodlebug}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Doodlebug@{Doodlebug}}
+\subsubsection{get\+Time()}
+{\footnotesize\ttfamily int Doodlebug\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{get\+Time()}{p.}{classDoodlebug_a4325b77e742e8d1f93004f442f09461a} is a getter function for the turns which the doodlebug has been alive
+
+\begin{DoxyReturn}{Returns}
+age of the \doxyref{Doodlebug}{p.}{classDoodlebug} object 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_a9bc6dfde09d0e18a628cf843bb037d4b}.
+
+
+
+References Organism\+::age.
+
+\mbox{\label{classDoodlebug_ab5f01947b5eb3a92492162c2774344f9}} 
+\index{Doodlebug@{Doodlebug}!is\+Move@{is\+Move}}
+\index{is\+Move@{is\+Move}!Doodlebug@{Doodlebug}}
+\subsubsection{is\+Move()}
+{\footnotesize\ttfamily bool Doodlebug\+::is\+Move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{is\+Move()}{p.}{classDoodlebug_ab5f01947b5eb3a92492162c2774344f9} checks the state of the given cell to see whether the object can be moved into by an existing \doxyref{Doodlebug}{p.}{classDoodlebug}
+
+\begin{DoxyReturn}{Returns}
+a boolean for if the cell can be moved into 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_a7930747968e8533164d068be96f21ca0}.
+
+
+
+Referenced by simple\+Move().
+
+\mbox{\label{classDoodlebug_a75fb734381d7a316ba7370ba37c69471}} 
+\index{Doodlebug@{Doodlebug}!move@{move}}
+\index{move@{move}!Doodlebug@{Doodlebug}}
+\subsubsection{move()}
+{\footnotesize\ttfamily void Doodlebug\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\doxyref{move()}{p.}{classDoodlebug_a75fb734381d7a316ba7370ba37c69471} checks the adjacent cells for prey, and attacks if it can. If it cannot, calls \doxyref{simple\+Move()}{p.}{classDoodlebug_a6b4ac6c11dc9b596eb6e83b245a43c2f} to move the the \doxyref{Doodlebug}{p.}{classDoodlebug} 
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_a7fe2c98ea7b292d414b19bd67e885b55}.
+
+
+
+References can\+Attack(), grid\+Len, hunger, on\+Edge(), simple\+Move(), Organism\+::x, and Organism\+::y.
+
+
+
+Referenced by action(), breed(), and simple\+Move().
+
+\mbox{\label{classDoodlebug_a6b4ac6c11dc9b596eb6e83b245a43c2f}} 
+\index{Doodlebug@{Doodlebug}!simple\+Move@{simple\+Move}}
+\index{simple\+Move@{simple\+Move}!Doodlebug@{Doodlebug}}
+\subsubsection{simple\+Move()}
+{\footnotesize\ttfamily void Doodlebug\+::simple\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{simple\+Move()}{p.}{classDoodlebug_a6b4ac6c11dc9b596eb6e83b245a43c2f} attempts to move a doodlebug into an adjacent cell, choosing one randomly and trying the rest. If none of the cases which were tried work, \doxyref{move()}{p.}{classDoodlebug_a75fb734381d7a316ba7370ba37c69471} calls itself recursively to try again. It also checks whether it is on the edge of the grid, and terminates if the ant is unable to move 
+
+References grid\+Len, is\+Move(), move(), on\+Edge(), Organism\+::x, and Organism\+::y.
+
+
+
+Referenced by move().
+
+\mbox{\label{classDoodlebug_a7f1c26c8458f3811680c778362c0e374}} 
+\index{Doodlebug@{Doodlebug}!starve@{starve}}
+\index{starve@{starve}!Doodlebug@{Doodlebug}}
+\subsubsection{starve()}
+{\footnotesize\ttfamily bool Doodlebug\+::starve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{starve()}{p.}{classDoodlebug_a7f1c26c8458f3811680c778362c0e374} checks the hunger of the doodlebug and kills off the doodlebug if the hunger conditions are met.
+
+\begin{DoxyReturn}{Returns}
+boolean indicating whether the doodlebug starved or not 
+\end{DoxyReturn}
+
+
+References hunger, Organism\+::x, and Organism\+::y.
+
+
+
+Referenced by action().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classDoodlebug_adf01154783c8192c8cc7ab194f22e542}} 
+\index{Doodlebug@{Doodlebug}!hunger@{hunger}}
+\index{hunger@{hunger}!Doodlebug@{Doodlebug}}
+\subsubsection{hunger}
+{\footnotesize\ttfamily int Doodlebug\+::hunger\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by action(), Doodlebug(), move(), and starve().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Doodlebug.\+h}\item 
+\textbf{ Doodlebug.\+cpp}\end{DoxyCompactItemize}

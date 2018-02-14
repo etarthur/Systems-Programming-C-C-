@@ -1,0 +1,152 @@
+\section{teller.\+cpp File Reference}
+\label{teller_8cpp}\index{teller.\+cpp@{teller.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include \char`\"{}sim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}teller.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}eventqueue.\+h\char`\"{}}\newline
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+float \textbf{ simulation\+\_\+time}
+\item 
+float \textbf{ avg\+\_\+service\+\_\+time}
+\item 
+int \textbf{ total\+\_\+time}
+\item 
+int \textbf{ total\+\_\+idle\+\_\+time}
+\item 
+int \textbf{ times\+\_\+idle}
+\item 
+int \textbf{ total\+\_\+transaction\+\_\+time}
+\item 
+int \textbf{ tellers}
+\item 
+int $\ast$ \textbf{ customers\+\_\+in\+\_\+line}
+\item 
+list$<$ int $>$ \textbf{ time\+\_\+in\+\_\+bank}
+\item 
+\textbf{ Teller\+Queue} \textbf{ teller\+\_\+queue}
+\item 
+\textbf{ Teller\+Queue} $\ast$ \textbf{ teller\+\_\+queues}
+\item 
+\textbf{ Event\+Queue} $\ast$ \textbf{ event\+\_\+queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\label{teller_8cpp_a210f77aba17cfc74d1447f45e99be1bd}} 
+\index{teller.\+cpp@{teller.\+cpp}!avg\+\_\+service\+\_\+time@{avg\+\_\+service\+\_\+time}}
+\index{avg\+\_\+service\+\_\+time@{avg\+\_\+service\+\_\+time}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{avg\+\_\+service\+\_\+time}
+{\footnotesize\ttfamily float avg\+\_\+service\+\_\+time}
+
+
+
+Referenced by main(), and Teller\+::process\+\_\+transaction().
+
+\mbox{\label{teller_8cpp_abf7392d380d62115dbe6c7c4d74dab62}} 
+\index{teller.\+cpp@{teller.\+cpp}!customers\+\_\+in\+\_\+line@{customers\+\_\+in\+\_\+line}}
+\index{customers\+\_\+in\+\_\+line@{customers\+\_\+in\+\_\+line}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{customers\+\_\+in\+\_\+line}
+{\footnotesize\ttfamily int$\ast$ customers\+\_\+in\+\_\+line}
+
+
+
+Referenced by Teller\+::action\+\_\+multiple\+\_\+lines(), Teller\+::process\+\_\+transaction(), and sim\+\_\+multiple\+\_\+lines().
+
+\mbox{\label{teller_8cpp_aa744d577d29be27806283672a6ef5502}} 
+\index{teller.\+cpp@{teller.\+cpp}!event\+\_\+queue@{event\+\_\+queue}}
+\index{event\+\_\+queue@{event\+\_\+queue}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{event\+\_\+queue}
+{\footnotesize\ttfamily \textbf{ Event\+Queue}$\ast$ event\+\_\+queue}
+
+
+
+Referenced by sim\+\_\+single\+\_\+line().
+
+\mbox{\label{teller_8cpp_a68868698f39e24d72046de64a0adbc70}} 
+\index{teller.\+cpp@{teller.\+cpp}!simulation\+\_\+time@{simulation\+\_\+time}}
+\index{simulation\+\_\+time@{simulation\+\_\+time}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{simulation\+\_\+time}
+{\footnotesize\ttfamily float simulation\+\_\+time}
+
+
+
+Referenced by Teller\+::action\+\_\+multiple\+\_\+lines(), and main().
+
+\mbox{\label{teller_8cpp_abf47d44d813ba82d16ab2770fb3f66f4}} 
+\index{teller.\+cpp@{teller.\+cpp}!teller\+\_\+queue@{teller\+\_\+queue}}
+\index{teller\+\_\+queue@{teller\+\_\+queue}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{teller\+\_\+queue}
+{\footnotesize\ttfamily \textbf{ Teller\+Queue} teller\+\_\+queue}
+
+\mbox{\label{teller_8cpp_a0b4f543de738e99fd64f58bb708e2233}} 
+\index{teller.\+cpp@{teller.\+cpp}!teller\+\_\+queues@{teller\+\_\+queues}}
+\index{teller\+\_\+queues@{teller\+\_\+queues}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{teller\+\_\+queues}
+{\footnotesize\ttfamily \textbf{ Teller\+Queue}$\ast$ teller\+\_\+queues}
+
+\mbox{\label{teller_8cpp_a8270f7b245fc61506570bb6b64bbffad}} 
+\index{teller.\+cpp@{teller.\+cpp}!tellers@{tellers}}
+\index{tellers@{tellers}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{tellers}
+{\footnotesize\ttfamily int tellers}
+
+
+
+Referenced by Teller\+::action\+\_\+multiple\+\_\+lines(), main(), sim\+\_\+multiple\+\_\+lines(), and sim\+\_\+single\+\_\+line().
+
+\mbox{\label{teller_8cpp_a95ee0b05d21d70c5ac092558dc43b844}} 
+\index{teller.\+cpp@{teller.\+cpp}!time\+\_\+in\+\_\+bank@{time\+\_\+in\+\_\+bank}}
+\index{time\+\_\+in\+\_\+bank@{time\+\_\+in\+\_\+bank}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{time\+\_\+in\+\_\+bank}
+{\footnotesize\ttfamily list$<$int$>$ time\+\_\+in\+\_\+bank}
+
+
+
+Referenced by Teller\+::action\+\_\+multiple\+\_\+lines(), and find\+St\+Dev().
+
+\mbox{\label{teller_8cpp_a0a435446c9f9edf46e5f85d076921492}} 
+\index{teller.\+cpp@{teller.\+cpp}!times\+\_\+idle@{times\+\_\+idle}}
+\index{times\+\_\+idle@{times\+\_\+idle}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{times\+\_\+idle}
+{\footnotesize\ttfamily int times\+\_\+idle}
+
+
+
+Referenced by Teller\+::action\+\_\+multiple\+\_\+lines(), main(), and print().
+
+\mbox{\label{teller_8cpp_a3f064cc334d929cb4443e24f629a1cf6}} 
+\index{teller.\+cpp@{teller.\+cpp}!total\+\_\+idle\+\_\+time@{total\+\_\+idle\+\_\+time}}
+\index{total\+\_\+idle\+\_\+time@{total\+\_\+idle\+\_\+time}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{total\+\_\+idle\+\_\+time}
+{\footnotesize\ttfamily int total\+\_\+idle\+\_\+time}
+
+
+
+Referenced by Teller\+::action\+\_\+multiple\+\_\+lines(), main(), and print().
+
+\mbox{\label{teller_8cpp_a6754e1cc6922f32fb9afe8b9badcbe6f}} 
+\index{teller.\+cpp@{teller.\+cpp}!total\+\_\+time@{total\+\_\+time}}
+\index{total\+\_\+time@{total\+\_\+time}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{total\+\_\+time}
+{\footnotesize\ttfamily int total\+\_\+time}
+
+
+
+Referenced by find\+St\+Dev(), main(), print(), and Teller\+::process\+\_\+transaction().
+
+\mbox{\label{teller_8cpp_ae1eb274500513575890cd541b7a24160}} 
+\index{teller.\+cpp@{teller.\+cpp}!total\+\_\+transaction\+\_\+time@{total\+\_\+transaction\+\_\+time}}
+\index{total\+\_\+transaction\+\_\+time@{total\+\_\+transaction\+\_\+time}!teller.\+cpp@{teller.\+cpp}}
+\subsubsection{total\+\_\+transaction\+\_\+time}
+{\footnotesize\ttfamily int total\+\_\+transaction\+\_\+time}
+
+
+
+Referenced by main(), print(), and Teller\+::process\+\_\+transaction().
+

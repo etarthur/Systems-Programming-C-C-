@@ -1,0 +1,172 @@
+\section{Organism Class Reference}
+\label{classOrganism}\index{Organism@{Organism}}
+
+
+{\ttfamily \#include $<$Organism.\+h$>$}
+
+Inheritance diagram for Organism\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classOrganism}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \textbf{ get\+Time} ()=0
+\item 
+virtual \textbf{ Organism} $\ast$ \textbf{ breed} ()=0
+\item 
+virtual void \textbf{ move} ()=0
+\item 
+virtual bool \textbf{ is\+Move} (int \textbf{ x}, int \textbf{ y})=0
+\item 
+virtual void \textbf{ action} ()=0
+\item 
+virtual \textbf{ $\sim$\+Organism} ()
+\item 
+\textbf{ Organism} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ x}
+\item 
+int \textbf{ y}
+\item 
+int \textbf{ age}
+\item 
+bool \textbf{ is\+Prey}
+\item 
+bool \textbf{ can\+Move}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classOrganism_a35c0e3695065b80c5ad766c10ac441df}} 
+\index{Organism@{Organism}!````~Organism@{$\sim$\+Organism}}
+\index{````~Organism@{$\sim$\+Organism}!Organism@{Organism}}
+\subsubsection{$\sim$\+Organism()}
+{\footnotesize\ttfamily virtual Organism\+::$\sim$\+Organism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\label{classOrganism_aeb16ee24b64839584b4862384d0b53fe}} 
+\index{Organism@{Organism}!Organism@{Organism}}
+\index{Organism@{Organism}!Organism@{Organism}}
+\subsubsection{Organism()}
+{\footnotesize\ttfamily Organism\+::\+Organism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classOrganism_af4dd34a96becf4f02ce4597901b81f60}} 
+\index{Organism@{Organism}!action@{action}}
+\index{action@{action}!Organism@{Organism}}
+\subsubsection{action()}
+{\footnotesize\ttfamily virtual void Organism\+::action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_a245518049f4a933c08fbd9e0c4d28be9}, and \textbf{ Ant} \doxyref{}{p.}{classAnt_a39fabe2c96298d5f7beb86649bf2dcab}.
+
+
+
+Referenced by update().
+
+\mbox{\label{classOrganism_ad963420d8437f87bd8fe4277cc7f810a}} 
+\index{Organism@{Organism}!breed@{breed}}
+\index{breed@{breed}!Organism@{Organism}}
+\subsubsection{breed()}
+{\footnotesize\ttfamily virtual \textbf{ Organism}$\ast$ Organism\+::breed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_a8b55bcada319ee2e9fc225073d9e72a2}, and \textbf{ Ant} \doxyref{}{p.}{classAnt_a6829e25685f8a52a2acc38f5edbfc549}.
+
+\mbox{\label{classOrganism_a9bc6dfde09d0e18a628cf843bb037d4b}} 
+\index{Organism@{Organism}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Organism@{Organism}}
+\subsubsection{get\+Time()}
+{\footnotesize\ttfamily virtual int Organism\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_a4325b77e742e8d1f93004f442f09461a}, and \textbf{ Ant} \doxyref{}{p.}{classAnt_a39712b5c8852fcf2f0b7857e276e95c7}.
+
+\mbox{\label{classOrganism_a7930747968e8533164d068be96f21ca0}} 
+\index{Organism@{Organism}!is\+Move@{is\+Move}}
+\index{is\+Move@{is\+Move}!Organism@{Organism}}
+\subsubsection{is\+Move()}
+{\footnotesize\ttfamily virtual bool Organism\+::is\+Move (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_ab5f01947b5eb3a92492162c2774344f9}, and \textbf{ Ant} \doxyref{}{p.}{classAnt_a90943e89be8e68321ef0626e7770da59}.
+
+\mbox{\label{classOrganism_a7fe2c98ea7b292d414b19bd67e885b55}} 
+\index{Organism@{Organism}!move@{move}}
+\index{move@{move}!Organism@{Organism}}
+\subsubsection{move()}
+{\footnotesize\ttfamily virtual void Organism\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_a75fb734381d7a316ba7370ba37c69471}, and \textbf{ Ant} \doxyref{}{p.}{classAnt_aaec1e3edaddd5e0ceedc333a9ac57a4c}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{classOrganism_a571ad7154459ef315d9fe8706f77e300}} 
+\index{Organism@{Organism}!age@{age}}
+\index{age@{age}!Organism@{Organism}}
+\subsubsection{age}
+{\footnotesize\ttfamily int Organism\+::age}
+
+
+
+Referenced by Ant\+::action(), Doodlebug\+::action(), Ant\+::\+Ant(), Ant\+::breed(), Doodlebug\+::breed(), Doodlebug\+::\+Doodlebug(), Ant\+::get\+Time(), and Doodlebug\+::get\+Time().
+
+\mbox{\label{classOrganism_aa06754a444d1684c4df1e9d24cac63c0}} 
+\index{Organism@{Organism}!can\+Move@{can\+Move}}
+\index{can\+Move@{can\+Move}!Organism@{Organism}}
+\subsubsection{can\+Move}
+{\footnotesize\ttfamily bool Organism\+::can\+Move}
+
+
+
+Referenced by Ant\+::action(), Doodlebug\+::action(), and update().
+
+\mbox{\label{classOrganism_a9be19bc70a91f6200bc5e3ebe7b037e1}} 
+\index{Organism@{Organism}!is\+Prey@{is\+Prey}}
+\index{is\+Prey@{is\+Prey}!Organism@{Organism}}
+\subsubsection{is\+Prey}
+{\footnotesize\ttfamily bool Organism\+::is\+Prey}
+
+
+
+Referenced by Ant\+::\+Ant(), can\+Attack(), and Doodlebug\+::\+Doodlebug().
+
+\mbox{\label{classOrganism_a84f3cc4278086da52a0799c5409d124c}} 
+\index{Organism@{Organism}!x@{x}}
+\index{x@{x}!Organism@{Organism}}
+\subsubsection{x}
+{\footnotesize\ttfamily int Organism\+::x}
+
+
+
+Referenced by Ant\+::action(), Doodlebug\+::action(), Ant\+::\+Ant(), Ant\+::breed(), Doodlebug\+::breed(), Doodlebug\+::\+Doodlebug(), Ant\+::is\+Move(), Ant\+::move(), Doodlebug\+::move(), Doodlebug\+::simple\+Move(), and Doodlebug\+::starve().
+
+\mbox{\label{classOrganism_a3155ebae3b054a722cfbf8fdc68e3af6}} 
+\index{Organism@{Organism}!y@{y}}
+\index{y@{y}!Organism@{Organism}}
+\subsubsection{y}
+{\footnotesize\ttfamily int Organism\+::y}
+
+
+
+Referenced by Ant\+::action(), Doodlebug\+::action(), Ant\+::\+Ant(), Ant\+::breed(), Doodlebug\+::breed(), Doodlebug\+::\+Doodlebug(), Ant\+::is\+Move(), Ant\+::move(), Doodlebug\+::move(), Doodlebug\+::simple\+Move(), and Doodlebug\+::starve().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Organism.\+h}\end{DoxyCompactItemize}

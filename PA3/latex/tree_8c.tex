@@ -1,0 +1,88 @@
+\section{tree.\+c File Reference}
+\label{tree_8c}\index{tree.\+c@{tree.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stringfunctions.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}tree.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Binary\+Tree} $\ast$ \textbf{ add\+Node} (char $\ast$a, \textbf{ Binary\+Tree} $\ast$tree)
+\item 
+int \textbf{ total\+Words} (\textbf{ Binary\+Tree} $\ast$tree)
+\item 
+int \textbf{ specific\+Words} (\textbf{ Binary\+Tree} $\ast$tree)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{tree_8c_a4bd69b66d4a265ef2aa739944c317c37}} 
+\index{tree.\+c@{tree.\+c}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!tree.\+c@{tree.\+c}}
+\subsubsection{add\+Node()}
+{\footnotesize\ttfamily \textbf{ Binary\+Tree}$\ast$ add\+Node (\begin{DoxyParamCaption}\item[{char $\ast$}]{a,  }\item[{\textbf{ Binary\+Tree} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+Tree class has all the functions that work with binary treesadd\+Node takes a string and a binary tree and returns a pointer to the new tree with the added element add\+Node works by using compare\+String to find the correct spot for the node within the tree and places it there recursively. If string is already in tree, its times field is incremented 
+\begin{DoxyParams}{Parameters}
+{\em a} & the string to be added to the tree, or if already in increment the number of times \\
+\hline
+{\em tree} & the tree to be added to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Binary\+Tree$\ast$ returns a pointer to the new tree with added node 
+\end{DoxyReturn}
+
+
+References add\+Node(), compare\+String(), Binary\+Tree\+::left, Binary\+Tree\+::length, Binary\+Tree\+::right, Binary\+Tree\+::string, and Binary\+Tree\+::times.
+
+
+
+Referenced by add\+Node(), and main().
+
+\mbox{\label{tree_8c_a2baa7dc033b7a2823abeaf84f66d59ee}} 
+\index{tree.\+c@{tree.\+c}!specific\+Words@{specific\+Words}}
+\index{specific\+Words@{specific\+Words}!tree.\+c@{tree.\+c}}
+\subsubsection{specific\+Words()}
+{\footnotesize\ttfamily int specific\+Words (\begin{DoxyParamCaption}\item[{\textbf{ Binary\+Tree} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+specific\+Words takes a tree and returns the number of unique words within Works identical to total words but instead it only adds one not the amount of times a string appears. Works by recursively going down the tree and adding 1 for every node. 
+\begin{DoxyParams}{Parameters}
+{\em tree} & the tree that has all the words in it to be counted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: the amount of unique words in the tree 
+\end{DoxyReturn}
+
+
+References Binary\+Tree\+::left, Binary\+Tree\+::right, and specific\+Words().
+
+
+
+Referenced by main(), and specific\+Words().
+
+\mbox{\label{tree_8c_a48852a94b6a678216da42240b703f4ef}} 
+\index{tree.\+c@{tree.\+c}!total\+Words@{total\+Words}}
+\index{total\+Words@{total\+Words}!tree.\+c@{tree.\+c}}
+\subsubsection{total\+Words()}
+{\footnotesize\ttfamily int total\+Words (\begin{DoxyParamCaption}\item[{\textbf{ Binary\+Tree} $\ast$}]{tree }\end{DoxyParamCaption})}
+
+total\+Words takes a tree and returns the number of words(including repeats) total\+Words works similar to print\+Order it traverses the tree in order and adds all the words recursively 
+\begin{DoxyParams}{Parameters}
+{\em tree} & the tree that all the strings are stored in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int\+: the total number of words in the tree 
+\end{DoxyReturn}
+
+
+References Binary\+Tree\+::left, Binary\+Tree\+::right, Binary\+Tree\+::times, and total\+Words().
+
+
+
+Referenced by main(), and total\+Words().
+
