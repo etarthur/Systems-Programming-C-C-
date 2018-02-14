@@ -2,7 +2,7 @@ To run:
 	./PA5 gridSize #doodlebugs #ants #time_steps seed pause
 
 All parameters are optional:
-gridSize: integer which is theh number of cells along one dimension of the grid(default: 20)
+gridSize: integer which is the number of cells along one dimension of the grid(default: 20)
 #doodlebugs: integer, number of doodlebugs to start with(default: 5)
 #ants: integer, number of ants to start with(default: 100)
 #time_steps: integer, number of steps to simulate(default:1000)
