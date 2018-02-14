@@ -1,4 +1,4 @@
-PA1.c by Eric Arthur for CS2303
+PA1.c by etarthur for CS2303
 
 The program prints out a calendar for a year the user inputs. To run compile and run ./a.out then input a valid year(see below Data Types). If an invalid
 year is inputted, then the program will continually prompt the user to input a valid one until they do. When a valid one is printed the calendar for the year
